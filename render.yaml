@@ -1,0 +1,50 @@
+# render.yaml - Render deployment configuration
+services:
+  - type: web
+    name: ultimate-music-bot
+    env: python
+    plan: starter # or paid plan for better performance
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: YOUTUBE_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        value: sqlite:///musicbot.db
+      - key: MAX_QUEUE_SIZE
+        value: "100"
+      - key: DEFAULT_VOLUME
+        value: "0.5"
+      - key: MAINTENANCE_MODE
+        value: "false"
+      - key: LOGGING_ENABLED
+        value: "true"
+      - key: AUTO_LEAVE_TIMEOUT
+        value: "300"
+      - key: RATE_LIMIT_ENABLED
+        value: "true"
+      - key: MAX_COMMANDS_PER_MINUTE
+        value: "30"
+      - key: ENABLE_CHANNEL_PLAY
+        value: "true"
+      - key: ENABLE_VIDEO_CALLS
+        value: "true"
+      - key: MAX_CONCURRENT_STREAMS
+        value: "10"
+      - key: PYTHON_VERSION
+        value: "3.11.7"
+    
+    # Health check configuration
+    healthCheckPath: /health
+    
+    # Disk storage for downloads and cache
+    disk:
+      name: bot-storage
+      mountPath: /opt/render/project/src/downloads
+      sizeGB: 1
