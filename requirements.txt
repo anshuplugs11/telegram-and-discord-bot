@@ -1,0 +1,76 @@
+# Discord Bot Dependencies
+discord.py==2.3.2
+discord==2.3.2
+
+# Telegram Bot Dependencies
+python-telegram-bot==20.7
+python-telegram-bot[webhooks]==20.7
+
+# YouTube and Music Processing
+yt-dlp==2023.12.30
+youtube-dl==2021.12.17
+pytube==15.0.0
+
+# Audio Processing
+PyNaCl==1.5.0
+ffmpeg-python==0.2.0
+pydub==0.25.1
+
+# Telegram Voice Chat Support
+pytgcalls==3.0.0.dev24
+py-tgcalls==1.0.0a1
+
+# Database
+aiosqlite==0.19.0
+sqlalchemy==2.0.25
+
+# HTTP and Async
+aiohttp==3.9.1
+aiofiles==23.2.1
+httpx==0.26.0
+requests==2.31.0
+
+# System Monitoring
+psutil==5.9.6
+
+# Spotify Integration (Optional)
+spotipy==2.22.1
+
+# File Processing
+mutagen==1.47.0
+python-magic==0.4.27
+
+# Utilities
+python-dotenv==1.0.0
+colorlog==6.8.0
+asyncio==3.4.3
+typing-extensions==4.9.0
+
+# Voice Processing
+pyogg==0.6.14a1
+opuslib==3.0.1
+
+# Image Processing (for thumbnails)
+Pillow==10.1.0
+
+# JSON and Data Processing
+ujson==5.9.0
+orjson==3.9.10
+
+# Encryption and Security
+cryptography==41.0.8
+
+# Development and Debugging
+pytest==7.4.3
+pytest-asyncio==0.21.1
+black==23.12.0
+flake8==6.1.0
+
+# Performance
+uvloop==0.19.0; sys_platform != "win32"
+cchardet==2.1.7
+
+# Additional Utilities
+pytz==2023.3
+humanize==4.9.0
+python-dateutil==2.8.2
